@@ -7,11 +7,11 @@ def what_are_the_vars(*args, **kwargs):
     obj = ObjectC()
 
     # Assign the positional arguments to the object with dynamic names
-    for index, arg in enumerate(args):
+    for index, value in enumerate(args):
         # Check if attribute 'var_{index}' exist
         if hasattr(obj, f"var_{index}"):
             return None
-        setattr(obj, f"var_{index}", arg)
+        setattr(obj, f"var_{index}", value)
         
     # Assign the keyword arguments to the object
     for key, value in kwargs.items():
