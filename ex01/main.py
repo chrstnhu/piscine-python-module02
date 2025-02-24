@@ -1,30 +1,24 @@
 def what_are_the_vars(*args, **kwargs):
     """
-    This function should create an instance of ObjectC and pass
+    This function create an instance of ObjectC and pass
     the arguments to the ObjectC constructor to set attributes.
     """
     # Create an instance of ObjectC, passing all arguments
     obj = ObjectC()
-
-    created_attrs = []
 
     # Assign the positional arguments to the object with dynamic names
     for index, arg in enumerate(args):
         # Check if attribute 'var_{index}' exist
         if hasattr(obj, f"var_{index}"):
             return None
-            
         setattr(obj, f"var_{index}", arg)
-        created_attrs.append(f"var_{index}")  # Garder une trace des attributs créés
         
     # Assign the keyword arguments to the object
     for key, value in kwargs.items():
         # Check if attribute key exist
         if hasattr(obj, key):
-            return None 
-
+            return None
         setattr(obj, key, value)
-        created_attrs.append(key)
 
     # Return the created object
     return obj
