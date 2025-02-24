@@ -61,7 +61,14 @@ if __name__ == "__main__":
     else:
         print(result)
 
+    # Subject test
     print("\nTesting main with lambda function:")
     x = [1, 2, 3, 4, 5]
-    ft_map(lambda dum: dum + 1, x)
+    result = ft_map(lambda dum: dum + 1, x)
     print(result)
+    # Output:
+    # <generator object ft_map at 0x7f708faab7b0> # The adress will be different
+    result = list(ft_map(lambda t: t + 1, x))
+    print(result)
+    # Output:
+    # [2, 3, 4, 5, 6]
