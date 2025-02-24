@@ -52,3 +52,17 @@ if __name__ == "__main__":
     print("\nTesting ft_filter() with egalToTen() function:")
     result = ft_filter(egalToTen, test)
     print(list(result))
+
+    print("\nTesting main with lambda function:")
+    x = [1, 2, 3, 4, 5]
+
+    # Subject test
+    result = ft_filter(lambda dum: not (dum % 2), x)
+    print(result)
+    # Output:
+    # <generator object ft_filter at 0x7f709c777d00> # The adress will be different
+
+    result = list(ft_filter(lambda dum: not (dum % 2), x))
+    print(list(result))
+    # Output:
+    # [2, 4]
