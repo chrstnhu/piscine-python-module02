@@ -60,3 +60,8 @@ if __name__ == "__main__":
         print("None")
     else:
         print(result)
+
+    print("\nTesting main with lambda function:")
+    x = [1, 2, 3, 4, 5]
+    ft_map(lambda dum: dum + 1, x)
+    print(result)
