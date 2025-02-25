@@ -6,16 +6,20 @@ print(f"a: {a}\n")
 
 result = tstat.mean(a)
 print(f"Mean : {result}")
-# # Expected result: 82.4
+# Expected result: 82.4
 
 result = tstat.median(a)
 print(f"Median : {result}")
 # Expected result: 42.0
 
+result = tstat.quartile(a)
+print(f"Quartile : {result}")
+# Expected result: [10.0, 59.0]
 
-# tstat.quartile(a)
-# # Expected result: [10.0, 59.0]
-# tstat.var(a)
-# # Expected result: 12279.439999999999
-# tstat.std(a)
-# # Expected result: 110.81263465868862
+result = tstat.var(a)
+print(f"Variance : {result}")
+# Expected result: 12279.439999999999
+
+result = tstat.std(a)
+print(f"Standard deviation : {result}")
+# Expected result: 110.81263465868862
